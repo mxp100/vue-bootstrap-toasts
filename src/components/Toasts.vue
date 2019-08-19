@@ -15,7 +15,7 @@
           <div :class="'bg-' + item.type" :style="{ width: getCurrentProgress(item) + '%' }" />
         </div>
 
-        <div class="toast-header" :class="'bg-' + item.type" style="height: 35px;">
+        <div class="toast-header" v-if="this.showIcon" :class="'bg-' + item.type" style="height: 35px;">
           <strong class="ml-auto">
             <i class="toast-icon" :class="getIconClass(item)" />
           </strong>
@@ -54,6 +54,10 @@ export default {
       default: 3000
     },
     closeable: {
+      type: Boolean,
+      default: true
+    },
+    showIcon: {
       type: Boolean,
       default: true
     }
