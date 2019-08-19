@@ -101,7 +101,8 @@ export default {
         rtl: this.rtl,
         progress: 0,
         paused: false,
-        animationFrame: null
+        animationFrame: null,
+        showIcon: this.showIcon
       };
 
       // merge custom options
